@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+#intro {
+  background-color: #1E88E5;
+  color: #ffffff;
+  height: 20em;
+}
+
+.head {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2%;
+  padding-left: 10%;
+}
+.row_head{
+  margin-left:10%
+}
+.country-button {
+  margin-top: 5%;
+}
+.state-button {
+  margin-top: 5%;
+  margin-left: 12%
+}
+
+.covid_image {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  margin-top: 3.7%;
+}
+
+#info {
+  margin-top: 5%;
+  margin-left: 15%;
+  text-align: center;
+}
+
+.detail {
+  height: 100%;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>State Details</title>
+    <link rel="stylesheet" href="css/styles_state.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  </head>
+  <body>
+    <section id="intro">
+
+      <div class="div_head">
+        <!-- <div class="col-lg-8"> -->
+          <h1 class="head">Covid-19 Cases All Over India</h1>
+        <!-- </div>
+        <div class="col-lg-4">
+          <img class="covid_image" src="img_2.jpg" alt="">
+        </div> -->
+      </div>
+      <div class="container-fluid">
+
+      <div class="row total">
+<div class="col-lg-2">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">CONFIRMED CASES</h5>
+    <p class="card-text"><%= states.statewise[0].confirmed %></p>
+  </div>
+</div>
+</div>
+<!-- <div class="col-lg-2">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">ACTIVE CASES</h5>
+    <p class="card-text"><%= states.statewise[0].active %></p>
+  </div>
+</div>
+</div> -->
+<div class="col-lg-2">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">RECOVERED CASES</h5>
+    <p class="card-text"><%= states.statewise[0].recovered %></p>
+  </div>
+</div>
+</div>
+<div class="col-lg-2">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">DEATHS CASES</h5>
+    <p class="card-text"><%= states.statewise[0].deaths %></p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+    </section>
+
+    <section class="info">
+      <div class="container div_info">
+        <form action="/select-state" method="post" class="selectstateform">
+          <select class="statepick" name="statepick">
+            <optgroup label="SELECT">
+            <% for(var i=1;i<states.statewise.length;i++) { %>
+                <option value="<%= states.statewise[i].state %>"> <%= states.statewise[i].state %> </option>
+            <% } %>
+              </optgroup>
+          </select>
+          <button class="btn btn-primary btn-lg check" type="submit" name="button">Check</button>
+        </form>
+      </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    </body>
+</html>
